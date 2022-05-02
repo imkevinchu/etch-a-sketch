@@ -1,5 +1,6 @@
 const container = document.getElementById("container");
-const btn = document.getElementById("button");
+const btnNew = document.getElementById("new");
+const btnClear = document.getElementById("clear");
 
 const makeRows = (rows, cols) => {
   container.style.setProperty("--grid-rows", rows);
@@ -17,14 +18,21 @@ document.addEventListener("mouseover", (e) => {
     e.target.style.backgroundColor = "black";
   }
 
-  setTimeout(() => {
-    e.target.style.backgroundColor = "";
-  }, 600);
+  //   setTimeout(() => {
+  //     e.target.style.backgroundColor = "";
+  //   }, 600);
 });
 
 const newGrid = (e) => {
   let size = prompt("How many squares per side for new grid? (Up to 100)");
   makeRows(size, size);
+  clearGrid();
 };
 
-btn.addEventListener("click", newGrid);
+const clearGrid = () => {
+  let gridTiles = container.querySelectorAll("div");
+  gridTiles.forEach((gridTile) => (gridTile.style.backgroundColor = ""));
+};
+
+btnNew.addEventListener("click", newGrid);
+btnClear.addEventListener("click", clearGrid);

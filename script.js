@@ -1,4 +1,5 @@
 const container = document.getElementById("container");
+const btn = document.getElementById("button");
 
 const makeRows = (rows, cols) => {
   container.style.setProperty("--grid-rows", rows);
@@ -13,6 +14,13 @@ makeRows(16, 16);
 
 document.addEventListener("mouseover", (e) => {
   if (e.target.className == "grid-item") {
-    e.target.style.backgroundColor = "yellow";
+    e.target.style.backgroundColor = "black";
   }
 });
+
+const newGrid = (e) => {
+  let size = prompt("How many squares per side for new grid? (Up to 100)");
+  makeRows(size, size);
+};
+
+btn.addEventListener("click", newGrid);

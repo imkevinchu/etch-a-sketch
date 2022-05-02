@@ -14,3 +14,18 @@
     border: 1px solid #ddd;
     text-align: center;
   }
+
+  button {
+    background: #0e0b22;
+    color: #fff;
+    padding: 0.6rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+  }
+
+  button:hover {
+    cursor: pointer;
+    background: #2a2a2d;
+  }

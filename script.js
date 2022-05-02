@@ -11,14 +11,6 @@ const makeRows = (rows, cols) => {
 
 makeRows(16, 16);
 
-// const gridItems = document.querySelectorAll("grid-item");
-
-// gridItems.forEach((gridItem) => {
-//   gridItem.addEventListener("mouseover", (e) => {
-//     e.target.style.color = "yellow";
-//   });
-// });
-
 document.addEventListener("mouseover", (e) => {
   if (e.target.className == "grid-item") {
     e.target.style.backgroundColor = "yellow";

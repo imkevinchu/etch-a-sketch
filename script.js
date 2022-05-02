@@ -16,6 +16,10 @@ document.addEventListener("mouseover", (e) => {
   if (e.target.className == "grid-item") {
     e.target.style.backgroundColor = "black";
   }
+
+  setTimeout(() => {
+    e.target.style.backgroundColor = "";
+  }, 600);
 });
 
 const newGrid = (e) => {
